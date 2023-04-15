@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gotoRegister.findViewById(R.id.lognow);
+        gotoRegister = findViewById(R.id.registernow);
 
         gotoRegister.setOnClickListener(new View.OnClickListener() {
             @Override
