@@ -27,6 +27,19 @@ public class Register extends AppCompatActivity {
     TextView  gotoLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +87,8 @@ public class Register extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d("sucesso", "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
+                                    Toast.makeText(Register.this, "Register Save",
+                                            Toast.LENGTH_SHORT).show();
                                 } else {
                                     progressBar.setVisibility(View.GONE);
                                     // If sign in fails, display a message to the user.
