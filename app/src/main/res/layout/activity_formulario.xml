@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bcgact"
+    tools:context=".FormularioActivity">
+
+    <ImageView
+        android:id="@+id/logoform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_subway_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/textlabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formulario"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoform"
+        />
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:hint="Enter yout first name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textlabel"
+        />
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:hint="Enter yout last name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstname"
+        />
+
+
+
+    <Button
+        android:id="@+id/buttonsave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SAVE"
+        android:textColorHint="@color/white"
+        android:padding="2dp"
+        android:backgroundTint="@color/navy"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastname"
+        />
+
+    <Button
+        android:id="@+id/buttondisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DISPLAY DATA"
+        android:textColorHint="@color/white"
+        android:padding="2dp"
+        android:backgroundTint="@color/blue"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonsave"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

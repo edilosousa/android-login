@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="navy">#237fea</color>
     <color name="tint">#3A4371</color>
+    <color name="blue">#3B5BFF</color>
+    <color name="bcgact">#CEEFFF</color>
 </resources>
