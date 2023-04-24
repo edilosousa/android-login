@@ -6,27 +6,23 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class MyDataBaseHelper extends SQLiteOpenHelper{
-
-
+/**
+ * Created by allanromanato on 5/27/15.
+ */
+public class MyDataBaseHelper extends SQLiteOpenHelper {
     private Context context;
     private static final String DATABASE_NAME = "penson.db";
-    private static final int DAextends SQLiteOpenHelper {
+    public MyDataBaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+    }
 
+    @Override
+    public void onCreate(SQLiteDatabase db) {
 
-    public MyDataBaseHelper(@Nullable Context activity){
-            super(activity, DATABASE_NAME, null, DATABASE_VERSION);
-            this.context = activity;
-        }
+    }
 
-        @Override
-        public void onCreate (SQLiteDatabase db){
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        }
-
-        @Override
-        public void onUpgrade (SQLiteDatabase sqLiteDatabase,int i, int i1){
-
-        }
     }
 }
