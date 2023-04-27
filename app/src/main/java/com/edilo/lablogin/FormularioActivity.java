@@ -46,7 +46,7 @@ public class FormularioActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-
+                mLname.setEnabled(!editable.toString().isEmpty());
             }
         });
 
